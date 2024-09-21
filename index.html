@@ -14,7 +14,7 @@ div {
 
 </head>
 <body>
-<p>My chartjs test page v7</p>
+<p>My chartjs test page v8</p>
 
 <div>
   <canvas id="chart1" aria-label="Hello ARIA World" role="img"><p>Hello Fallback World</p></canvas>
@@ -25,7 +25,7 @@ div {
 	
       var ctx1 = document.getElementById('chart1').getContext('2d');
       var chart1 = new Chart(ctx1, {
-        type: 'bar',
+        type: 'line',
         plugins: [ChartDataSource],
         options: { plugins: { datasource: { url: 'degrees.csv' } } }
       });
