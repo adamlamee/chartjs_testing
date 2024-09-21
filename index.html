@@ -7,7 +7,7 @@ div {
 }
 </style>
 </head>
-  <p>My chartjs test page v8</p>
+  <p>My chartjs test page v9</p>
 <div>
   <canvas id="myChart" aria-label="Hello ARIA World" role="img"><p>Hello Fallback World</p></canvas>
 </div>
@@ -17,32 +17,25 @@ div {
 <script type="text/javascript" src="chartjs-plugin-datasource.js"></script>
 
 <script>
+	
 
-  new Chart(
-  	document.getElementById('myChart'), 
-  	{
-  		type: 'bar',
-  		plugins: [ChartDataSource],
-  		data: {
-  			labels: data.map(row=> row.year),
-  			datasets: [
-  				{
-  					label: '# of Votes',
-  					data: data.map(row => row.count),
-  					borderWidth: 1
-  				}]
-  			},
-  		options: {
-  			scales: {
-  				y: {
-  					beginAtZero: true
-  				}
-  			}
-  			plugins: {
-  				datasource: {
-	                url: 'https://github.com/adamlamee/chartjs_testing/raw/refs/heads/main/votes.csv'
-    	        }
-        	}
-  		}
-  	});
+var ctx = document.getElementById('myChart').getContext('2d');
+
+var chart = new Chart(ctx, {
+
+  type: 'bar',
+
+  plugins: [ChartDataSource],
+
+  options: {
+
+    daatasource: {
+
+      url: 'votes.xlsx'
+
+    }
+
+  }
+
+});
 </script>
