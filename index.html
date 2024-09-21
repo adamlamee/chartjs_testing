@@ -14,7 +14,7 @@ div {
 
 </head>
 <body>
-<p>My chartjs test page v1</p>
+<p>My chartjs test page v2</p>
 
 <div>
   <canvas id="chart1" aria-label="Hello ARIA World" role="img"><p>Hello Fallback World</p></canvas>
@@ -29,7 +29,8 @@ div {
         plugins: [ChartDataSource],
         data: {
         	datasets: [{
-        		yAxisID: 'physics',
+        		type: 'line',
+			yAxisID: 'physics',
 			backgroundColor: 'transparent',
         		borderColor: 'rgb(255, 99, 132)',
         		pointBackgroundColor: 'rgb(255, 99, 132)',
