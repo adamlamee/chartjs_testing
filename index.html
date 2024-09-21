@@ -6,39 +6,28 @@ div {
   border: 1px solid #4CAF50;
 }
 </style>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/xlsx@0.14.3/dist/xlsx.full.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1.0.1"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
+
 </head>
 <body>
-<p>My chartjs test page v3</p>
+<p>My chartjs test page v4</p>
 
 <div>
-  <canvas id="myChart" aria-label="Hello ARIA World" role="img"><p>Hello Fallback World</p></canvas>
+  <canvas id="chart1" aria-label="Hello ARIA World" role="img"><p>Hello Fallback World</p></canvas>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script type="text/javascript" src="xlsx.full.min.js"></script>
-<script type="text/javascript" src="chartjs-plugin-datasource.js"></script>
 
 <script>
 	
-
-var ctx = document.getElementById('myChart').getContext('2d');
-
-var chart = new Chart(ctx, {
-
-  type: 'bar',
-
-  plugins: [ChartDataSource],
-
-  options: {
-
-    daatasource: {
-
-      url: 'https://github.com/adamlamee/chartjs_testing/raw/refs/heads/main/sample-dataset.xlsx'
-
-    }
-
-  }
-
-});
+      var ctx1 = document.getElementById('chart1').getContext('2d');
+      var chart1 = new Chart(ctx1, {
+        type: 'bar',
+        plugins: [ChartDataSource],
+        options: { plugins: { datasource: { url: 'sample-dataset.xlsx' } } }
+      });
 </script>
 </body>
