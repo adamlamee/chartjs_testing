@@ -14,7 +14,7 @@ div {
 
 </head>
 <body>
-<p>My chartjs test page v4</p>
+<p>My chartjs test page v5</p>
 
 <div>
   <canvas id="chart1" aria-label="Hello ARIA World" role="img"><p>Hello Fallback World</p></canvas>
@@ -23,11 +23,11 @@ div {
 
 <script>
 	
-      var ctx1 = document.getElementById('chart1').getContext('2d');
+      var ctx1 = document.getElementById('chart1');
       var chart1 = new Chart(ctx1, {
         type: 'bar',
         plugins: [ChartDataSource],
-        options: { plugins: { datasource: { url: 'sample-dataset.xlsx' } } }
+        options: { plugins: { datasource: { url: 'votes.csv' } } }
       });
 </script>
 </body>
