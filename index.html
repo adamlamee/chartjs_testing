@@ -14,7 +14,7 @@ div {
 
 </head>
 <body>
-<p>My chartjs test page v3</p>
+<p>My chartjs test page v4</p>
 
 <div>
   <canvas id="chart1" aria-label="Hello ARIA World" role="img"><p>Hello Fallback World</p></canvas>
@@ -25,23 +25,8 @@ div {
 	
       var ctx1 = document.getElementById('chart1').getContext('2d');
       var chart1 = new Chart(ctx1, {
-        type: 'bar',
+        type: 'line',
         plugins: [ChartDataSource],
-        data: {
-        	datasets: [{
-        		type: 'line',
-			yAxisID: 'physics',
-			backgroundColor: 'transparent',
-        		borderColor: 'rgb(255, 99, 132)',
-        		pointBackgroundColor: 'rgb(255, 99, 132)',
-        		tension: 0,
-        		fill: false ,
-        		}, {
-        		yAxisID: 'STEM',
-        		borderColor: 'rgb(1, 99, 132)',
-        		BackgroundColor: 'rgb(255, 99, 132)',
-        		}]
-        	},
         options: { plugins: { datasource: { url: 'degrees.csv' } } }
       });
 </script>
