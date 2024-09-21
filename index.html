@@ -14,7 +14,7 @@ div {
 
 </head>
 <body>
-<p>My chartjs test page v4</p>
+<p>My chartjs test page v5</p>
 
 <div>
   <canvas id="chart1" aria-label="Hello ARIA World" role="img"><p>Hello Fallback World</p></canvas>
@@ -27,6 +27,21 @@ div {
       var chart1 = new Chart(ctx1, {
         type: 'line',
         plugins: [ChartDataSource],
+	        data: {
+        	datasets: [{
+        		backgroundColor: 'transparent',
+        		borderColor: 'rgb(255, 99, 132)',
+        		pointBackgroundColor: 'rgb(255, 99, 132)',
+        		tension: 0,
+        		fill: false ,
+        		}, {
+        		backgroundColor: 'transparent',
+        		borderColor: 'rgb(1, 99, 132)',
+        		pointBackgroundColor: 'rgb(255, 99, 132)',
+        		tension: 0,
+        		fill: true ,
+        		}]
+        	},
         options: { plugins: { datasource: { url: 'degrees.csv' } } }
       });
 </script>
