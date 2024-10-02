@@ -42,7 +42,15 @@ div {
         		fill: true ,
         		}]
         	},
-        options: { plugins: { datasource: { url: 'degrees.csv' } } }
+        options: {
+		plugins: {
+			datasource: { url: 'degrees.csv' } 
+			subtitle: {
+				display: true,
+				text: 'my subtitle'
+			}
+		}
+	}
       });
 </script>
 </body>
